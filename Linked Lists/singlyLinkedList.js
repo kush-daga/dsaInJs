@@ -140,7 +140,7 @@ const myLinkedList = new LinkedList(10);
 myLinkedList.append(5);
 myLinkedList.prepend(15);
 // console.log(myLinkedList.printList());
-myLinkedList.insert(0, 10);
+// myLinkedList.insert(0, 10);
 // console.log(myLinkedList.printList());
 myLinkedList.insert(2, 0);
 myLinkedList.insert(4, 20);
