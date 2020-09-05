@@ -119,6 +119,21 @@ class LinkedList {
     }
     return currentNode;
   }
+  // REVERSE A LINKED LIST
+  reverse() {
+    //Only 1 node
+    if (!this.head.next) {
+      return this.head;
+    }
+
+    let first = this.head;
+    let second = first.next;
+    let last = this.tail;
+
+    while (second) {
+      const temp = second.next;
+    }
+  }
 }
 
 const myLinkedList = new LinkedList(10);
