@@ -127,12 +127,20 @@ class LinkedList {
     }
 
     let first = this.head;
+    this.tail = this.head;
     let second = first.next;
     let last = this.tail;
 
     while (second) {
       const temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
     }
+
+    this.head.next = null;
+    this.head = first;
+    return this.printList();
   }
 }
 
@@ -145,5 +153,5 @@ myLinkedList.prepend(15);
 myLinkedList.insert(2, 0);
 myLinkedList.insert(4, 20);
 myLinkedList.insert(10, 110); // Should not do anything, as index not present in linked list
-
+myLinkedList.reverse();
 // console.log(myLinkedList.printList());
